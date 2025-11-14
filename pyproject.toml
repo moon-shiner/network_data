@@ -5,7 +5,7 @@ description = "Reusable network data YAMLs for network automation"
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
 authors = [
-    {name = "Not a Developer, email = "nad@example.com"}
+    {name = "Not a Developer", email = "nad@example.com"}
 ]
 license = {text = "MIT"}
 dependencies = []
