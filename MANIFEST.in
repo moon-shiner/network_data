@@ -1,0 +1,2 @@
+include network_data/*.yaml
+recursive-include network_data/sites *.yaml

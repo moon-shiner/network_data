@@ -1,15 +1,3 @@
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
-
-[project]
-name = "network_data"
-version = "0.1.0"
-description = "Reusable network data YAMLs for network automation"
-readme = "README.md"
-requires-python = ">=3.12,<4.0"
-authors = [
-    {name = "Your Name", email = "you@example.com"}
-]
-license = {text = "MIT"}
-dependencies = []
