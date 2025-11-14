@@ -1,0 +1,9 @@
+ntp_servers:
+  - 13.55.50.68
+  - 129.6.15.28
+dns_servers:
+  - 192.168.0.79
+  - 192.168.0.1
+syslog_server: 192.168.0.79
+snmp:
+  community: public

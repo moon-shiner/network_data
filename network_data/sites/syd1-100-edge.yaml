@@ -1,0 +1,33 @@
+region: Syd
+az: 1
+site: 100
+role: edge
+platform: junos-mx480
+loopback_prefix: 10.0.0.0/28
+management_prefix: 192.168.0.0/28
+mgmt_int: ge-0/0/9
+ipam_check: true
+
+pods:
+  p1:
+    infra_prefix: 172.16.0.0/24
+    asn: 65200
+    devices:
+      - name: syd1-100-edge-p1-r1
+        uplinks:
+          - { interface: ge-0/0/1, peer: syd1-100-core-p1-r1, peer_int: ge-0/0/1 }
+          - { interface: ge-0/0/2, peer: syd1-100-edge-p1-r2, peer_int: ge-0/0/2 }
+      - name: syd1-100-edge-p1-r2
+        uplinks:
+          - { interface: ge-0/0/1, peer: syd1-100-core-p1-r2, peer_int: ge-0/0/1 }
+          - { interface: ge-0/0/2, peer: syd1-100-edge-p1-r1, peer_int: ge-0/0/2 }
+  p2:
+    devices:
+      - name: syd1-100-edge-p2-r1
+        uplinks:
+          - { interface: ge-0/0/1, peer: syd1-100-core-p2-r1, peer_int: ge-0/0/1 }
+          - { interface: ge-0/0/2, peer: syd1-100-edge-p2-r2, peer_int: ge-0/0/2 }
+      - name: syd1-100-edge-p2-r2
+        uplinks:
+          - { interface: ge-0/0/1, peer: syd1-100-core-p2-r2, peer_int: ge-0/0/1 }
+          - { interface: ge-0/0/2, peer: syd1-100-edge-p2-r1, peer_int: ge-0/0/2 }
