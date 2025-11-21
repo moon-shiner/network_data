@@ -22,6 +22,8 @@ pods:
           - { interface: ge-0/0/1, peer: syd1-100-core-p1-r2, peer_int: ge-0/0/1 }
           - { interface: ge-0/0/2, peer: syd1-100-edge-p1-r1, peer_int: ge-0/0/2 }
   p2:
+    infra_prefix: 172.16.1.0/24
+    asn: 65201
     devices:
       - name: syd1-100-edge-p2-r1
         uplinks:
